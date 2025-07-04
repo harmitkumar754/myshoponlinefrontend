@@ -1,0 +1,69 @@
+/* Global CSS to prevent horizontal scrolling */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure containers don't overflow */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix for any potential horizontal scroll issues */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Ensure dropdown menus are always visible */
+.dropdown-menu {
+  z-index: 9999 !important;
+}
+
+/* Fix for sticky header */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Ensure proper stacking context */
+.z-50 {
+  z-index: 50;
+}
+
+.z-9999 {
+  z-index: 9999;
+}
